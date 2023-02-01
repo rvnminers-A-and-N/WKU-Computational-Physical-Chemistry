@@ -1,0 +1,49 @@
+Production
+&cntrl
+imin = 0,
+irest = 1,
+ntx = 5,
+ntb = 1,
+pres0=1.0,
+ntp = 0,
+taup = 2.0,
+cut = 8.0,
+ntr = 0,
+ntc = 2,
+ntf = 2,
+tempi = 300.0,
+temp0 = 300.0,
+ntt = 3,
+gamma_ln = 1.0,
+nstlim = 2500000,
+dt = 0.002,
+ig = -1,
+iwrap = 1,
+ioutfm = 1,
+ntpr = 1000,
+ntwx = 1000,
+ntwr = 1000
+/
+&ewald
+ nfft1=30,
+ nftt2=30,
+ nftt3=30,
+ order=4
+/
+&wt
+ type='PRES0'
+ istep1=0
+ istep2=249998,
+ value1=1.0,
+ value2=1.0
+/
+&wt
+ type='PRES0'
+ istep1=249999
+ istep2=2500000,
+ value1=1.0,
+ value2=1.0
+/
+&wt
+ type='END'
+/
